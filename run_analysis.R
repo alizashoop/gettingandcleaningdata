@@ -60,11 +60,14 @@ names(merged)  <- gsub("-","",names(merged))
 names(merged)  <- gsub("\\(","",names(merged))
 names(merged)  <- gsub("\\)","",names(merged))
 
+##calculate mean for each subject/activity group
 run_analysis<- (merged%>%
                         group_by(subject,activity) %>%
                         summarise_each(funs(mean)))
 
+##rename full tidy data set
 tidy_data <- merged
+##rename summary tidy data set
 mean_tidy_data <- run_analysis
 
 #print dataset
