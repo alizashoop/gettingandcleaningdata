@@ -24,8 +24,4 @@ Data
 -dplyr
 -data.table
 
-*The script first locates the files on the drive and loads each file.
-*Then, the script selects the columns with "mean" or "std" in both the training and testing sets.
-*Next, the script begins to clean up the individial data sets and merges each data set.  Column names are also tidied.
-*Finally, the mean of each subject/activity group is calculated and saved into a separate data set.  
-*Both a full data set (tidy_data.txt) and a summary data set (mean_tidy_data.txt) are then available to the user.
+
